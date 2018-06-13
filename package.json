@@ -1,0 +1,25 @@
+{
+  "name": "influencer-bot",
+  "version": "1.0.0",
+  "description": "to grow follwers and increase engagement with account",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gilb03/tweet-bot.git"
+  },
+  "keywords": [
+    "NaN"
+  ],
+  "author": "Gil B.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gilb03/tweet-bot/issues"
+  },
+  "homepage": "https://github.com/Gilb03/tweet-bot#readme",
+  "dependencies": {
+    "twit": "^2.2.10"
+  }
+}
