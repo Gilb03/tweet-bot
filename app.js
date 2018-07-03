@@ -1,5 +1,5 @@
 const Twit = require('twit')
-const  T = new Twit(require('./server.js'))
+const  T = new Twit(require('./config.js'))
 
 /* const stream = T.stream('statuses/filter', {follow: users})  
 stream.on('tweet', function (tweet){
