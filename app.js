@@ -1,5 +1,5 @@
 const Twit = require('twit')
-const  T = new Twit(require('./server.js'))
+const  T = new Twit(require('./config.js'))
 
 /* const stream = T.stream('statuses/filter', {follow: users})  
 stream.on('tweet', function (tweet){
@@ -10,23 +10,14 @@ stream.on('tweet', function (tweet){
         })
    }
 })*/
-const User = [79543151835113089]
-const stream = T.stream('statuses/filter', {follow: User})
+const user = ['79543151835113089']
+const stream = T.stream('statuses/filter', {follow: user})
 stream.on('tweet', function (tweet){
-    if(users.indexOf(tweet.user.id_str) > -1){
+    if(user.indexOf(tweet.user.id_str) > -1){
         console.log(tweet.user.name + ':' + tweet.text)
-    } T.post('statusesretweet/:id', { id: '79543151835113089'}, function(err, data, response){
+    } T.post('statuses/retweeted_retweet/:id', { id: 'tweet.id_str'}, function(err, data, response){
         console.log(data)
 })
 
 retweetLatest()
 setInterval(retweetLatest, 100 * 60 * 12)})
-
-// make sure it worked
-function retweeted (err, reply){
-    if (err !== undefined){
-        console.log(err)
-    } else {
-        console.log('its good')
-    }
-}
