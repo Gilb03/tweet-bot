@@ -1,6 +1,7 @@
 const Twit = require('twit'),
 T = new Twit(require('./config')),
-hashtagSearch = { q: '#producer', count: 5, result_type: 'recent'},
+Express = require('express'),
+hashtagSearch = { q: '#IoT', count: 5, result_type: 'recent'},
 debug = false;
 
 function retweetLatest () {
@@ -25,4 +26,5 @@ function tweeted (err, tweeted){
   }
 function retweetLatest(){
 setInterval(retweetLatest, 1000 * 60 * 12)
+}
 }
